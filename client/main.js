@@ -12,6 +12,10 @@ Template.hello.events({
 });
 
 Meteor.startup(function () {
+  Accounts.onLogin(function () {
+    console.log('onLogin fired', Meteor.user())
+  });
+
   Meteor.autorun(function () {
     console.log('用户是否登录', Meteor.userId());
     console.log('用户字段', Meteor.user());
