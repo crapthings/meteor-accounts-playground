@@ -1,0 +1,23 @@
+<head>
+  <title>userzxc</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+  <button>
+    {{#if currentUser}}
+      注销
+    {{else}}
+      {{#if loggingIn}}
+        登录中
+      {{else}}
+        登录
+      {{/if}}
+    {{/if}}
+  </button>
+</template>
